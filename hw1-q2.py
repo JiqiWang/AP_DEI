@@ -29,6 +29,7 @@ class LogisticRegression(nn.Module):
         super().__init__()
         # In a pytorch module, the declarations of layers needs to come after
         # the super __init__ line, otherwise the magic doesn't work.
+        self.linear = nn.Linear(n_features, n_classes)
 
     def forward(self, x, **kwargs):
         """
@@ -44,7 +45,7 @@ class LogisticRegression(nn.Module):
         forward pass -- this is enough for it to figure out how to do the
         backward pass.
         """
-        raise NotImplementedError
+        return self.linear(x)
 
 
 # Q2.2
@@ -66,7 +67,22 @@ class FeedforwardNetwork(nn.Module):
         """
         super().__init__()
         # Implement me!
-        raise NotImplementedError
+        self.layers = nn.ModuleList()
+        self.activation_type = activation_type
+        self.dropout = dropout
+
+        # Input layer
+        self.layers.append(nn.Linear(n_features, hidden_size))
+        self.layers.append(self.get_activation())
+
+        # Hidden layers
+        for _ in range(layers - 1):
+            self.layers.append(nn.Linear(hidden_size, hidden_size))
+            self.layers.append(self.get_activation())
+            self.layers.append(nn.Dropout(p=dropout))
+
+        # Output layer
+        self.layers.append(nn.Linear(hidden_size, n_classes))
 
     def forward(self, x, **kwargs):
         """
@@ -76,7 +92,17 @@ class FeedforwardNetwork(nn.Module):
         the output logits from x. This will include using various hidden
         layers, pointwise nonlinear functions, and dropout.
         """
-        raise NotImplementedError
+        for layer in self.layers:
+            x = layer(x)
+        return x
+    
+    def get_activation(self):
+        if self.activation_type == 'relu':
+            return nn.ReLU()
+        elif self.activation_type == 'tanh':
+            return nn.Tanh()
+        else:
+            raise ValueError("Invalid activation type. Supported types: 'relu', 'sigmoid', 'tanh'.")
 
 
 def train_batch(X, y, model, optimizer, criterion, **kwargs):
@@ -97,7 +123,12 @@ def train_batch(X, y, model, optimizer, criterion, **kwargs):
     This function should return the loss (tip: call loss.item()) to get the
     loss as a numerical value that is not part of the computation graph.
     """
-    raise NotImplementedError
+    optimizer.zero_grad()
+    outputs = model(X)
+    loss = criterion(outputs, y)
+    loss.backward()
+    optimizer.step()
+    return loss.item()
 
 
 def predict(model, X):
@@ -147,13 +178,13 @@ def main():
     parser.add_argument('-epochs', default=20, type=int,
                         help="""Number of epochs to train for. You should not
                         need to change this value for your plots.""")
-    parser.add_argument('-batch_size', default=1, type=int,
+    parser.add_argument('-batch_size', default=16, type=int,
                         help="Size of training batch.")
     parser.add_argument('-learning_rate', type=float, default=0.01)
     parser.add_argument('-l2_decay', type=float, default=0)
-    parser.add_argument('-hidden_size', type=int, default=100)
-    parser.add_argument('-layers', type=int, default=1)
-    parser.add_argument('-dropout', type=float, default=0.3)
+    parser.add_argument('-hidden_size', type=int, default=200)
+    parser.add_argument('-layers', type=int, default=2)
+    parser.add_argument('-dropout', type=float, default=0.0)
     parser.add_argument('-activation',
                         choices=['tanh', 'relu'], default='relu')
     parser.add_argument('-optimizer',
