@@ -50,9 +50,11 @@ class Perceptron(LinearModel):
         y_hat = self.predict(x_i)
         # update
         if y_hat != y_i:
-            self.W[y_i] = self.W[y_i] + x_i
-            self.W[y_hat] = self.W[y_hat] - x_i
+            self.W[y_i] += x_i
+            self.W[y_hat] -= x_i
 
+def sigmoid(x):
+    return 1 / (1 + np.exp(-x))
 
 class LogisticRegression(LinearModel):
     def update_weight(self, x_i, y_i, learning_rate=0.001):
@@ -62,8 +64,17 @@ class LogisticRegression(LinearModel):
         learning_rate (float): keep it at the default value for your plots
         """
         # Q1.1b
-        raise NotImplementedError
 
+        label_scores = self.W.dot(x_i).reshape(-1,1)
+        y_one_hot = np.zeros((np.size(self.W, 0), 1))
+        y_one_hot[y_i] = 1
+        
+        # Softmax function
+        label_probabilities = np.exp(label_scores) / np.sum(np.exp(label_scores))
+        # Make sure dimensions are compatible for element-wise operations      
+        gradient = (y_one_hot - label_probabilities).reshape(-1, 1)
+        # SGD update
+        self.W += learning_rate * gradient * x_i
 
 class MLP(object):
     # Q3.2b. This MLP skeleton code allows the MLP to be used in place of the
@@ -103,6 +114,7 @@ def plot(epochs, train_accs, val_accs):
     plt.plot(epochs, train_accs, label='train')
     plt.plot(epochs, val_accs, label='validation')
     plt.legend()
+    plt.savefig('output11.png')
     plt.show()
 
 def plot_loss(epochs, loss):
