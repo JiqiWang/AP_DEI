@@ -87,11 +87,54 @@ class MLP(object):
         self.w2 = np.random.normal(0.1, 0.1, (hidden_size, n_classes))
         self.b2 = np.zeros(n_classes)
     
-    def predict(self, X):
+    def relu(self, x):
+        return np.maximum(0, x)
+
+    def softmax(self, x):
+        exp_x = np.exp(x - np.max(x))
+        return exp_x / np.sum(exp_x)
+
+    def forward(self, X):
         # Compute the forward pass of the network. At prediction timoye, there is
         # no need to save the values of hidden nodes, whereas this is required
         # at training time.
-        raise NotImplementedError
+        # Forward pass
+        z1 = np.dot(X, self.w1) + self.b1
+        a1 = self.relu(z1)
+        z2 = np.dot(a1, self.w2) + self.b2
+        a2 = self.softmax(z2)
+        return a1, a2
+
+    def backward(self, X, y, a1, a2, learning_rate=0.001):
+        # One-hot encoding of the target label
+        y_one_hot = np.zeros(self.b2.shape)
+        y_one_hot[y] = 1
+
+        # Backward pass
+        # Compute gradients for the output layer
+        dz2 = a2 - y_one_hot
+        dw2 = np.dot(a1.reshape(-1, 1), dz2.reshape(1, -1))
+        db2 = dz2.sum(axis=0)
+
+        # Compute gradients for the hidden layer
+        da1 = np.dot(dz2, self.w2.T)
+        dz1 = da1 * (a1 > 0)  # ReLU derivative
+        dw1 = np.dot(X.reshape(-1, 1), dz1.reshape(1, -1))
+        db1 = dz1.sum(axis=0)
+
+        # Update weights and biases
+        self.w2 -= learning_rate * dw2
+        self.b2 -= learning_rate * db2
+        self.w1 -= learning_rate * dw1
+        self.b1 -= learning_rate * db1
+
+        # Compute the loss
+        loss = -np.sum(y_one_hot * np.log(a2))
+        return loss
+    
+    def predict(self, X):
+        _, a2 = self.forward(X)
+        return np.argmax(a2, axis=1)
 
     def evaluate(self, X, y):
         """
@@ -108,7 +151,16 @@ class MLP(object):
         """
         Dont forget to return the loss of the epoch.
         """
-        raise NotImplementedError
+        total_loss = 0
+
+        for x_i, y_i in zip(X, y):
+            a1, a2 = self.forward(x_i)
+            loss = self.backward(x_i, y_i, a1, a2, learning_rate)
+            total_loss += loss
+        # Calculate average loss for the epoch
+        avg_loss = total_loss / len(X)
+
+        return avg_loss
 
 
 def plot(epochs, train_accs, val_accs):
