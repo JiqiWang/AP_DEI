@@ -82,8 +82,11 @@ class MLP(object):
     # in main().
     def __init__(self, n_classes, n_features, hidden_size):
         # Initialize an MLP with a single hidden layer.
-        raise NotImplementedError
-
+        self.w1 = np.random.normal(0.1, 0.1, (n_features, hidden_size))
+        self.b1 = np.zeros(hidden_size)
+        self.w2 = np.random.normal(0.1, 0.1, (hidden_size, n_classes))
+        self.b2 = np.zeros(n_classes)
+    
     def predict(self, X):
         # Compute the forward pass of the network. At prediction timoye, there is
         # no need to save the values of hidden nodes, whereas this is required

@@ -1,0 +1,1 @@
+TOCHECK:The statement is true. Logistic regression is less expressive but easier to train due to its convex optimization nature, while an MLP with ReLU activations is more expressive but presents challenges in the training process due to non-convex optimization.
