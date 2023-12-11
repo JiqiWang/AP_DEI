@@ -82,10 +82,10 @@ class MLP(object):
     # in main().
     def __init__(self, n_classes, n_features, hidden_size):
         # Initialize an MLP with a single hidden layer.
-        self.w1 = np.random.normal(0.1, 0.1, (n_features, hidden_size))
-        self.b1 = np.zeros(hidden_size)
-        self.w2 = np.random.normal(0.1, 0.1, (hidden_size, n_classes))
-        self.b2 = np.zeros(n_classes)
+        self.w1 = np.random.normal(0.1, 0.01, (hidden_size, n_features))
+        self.b1 = np.zeros((hidden_size, 1))
+        self.w2 = np.random.normal(0.1, 0.01, ( n_classes, hidden_size))
+        self.b2 = np.zeros((n_classes, 1))
     
     def relu(self, x):
         return np.maximum(0, x)
@@ -99,9 +99,9 @@ class MLP(object):
         # no need to save the values of hidden nodes, whereas this is required
         # at training time.
         # Forward pass
-        z1 = np.dot(X, self.w1) + self.b1
+        z1 = self.w1.dot(X) + self.b1
         a1 = self.relu(z1)
-        z2 = np.dot(a1, self.w2) + self.b2
+        z2 = self.w2.dot(a1) + self.b2
         a2 = self.softmax(z2)
         return a1, a2
 
@@ -113,28 +113,26 @@ class MLP(object):
         # Backward pass
         # Compute gradients for the output layer
         dz2 = a2 - y_one_hot
-        dw2 = np.dot(a1.reshape(-1, 1), dz2.reshape(1, -1))
-        db2 = dz2.sum(axis=0)
+        dw2 = dz2.dot(a1.T)
 
         # Compute gradients for the hidden layer
-        da1 = np.dot(dz2, self.w2.T)
+        da1 = np.dot(self.w2.T, dz2)
         dz1 = da1 * (a1 > 0)  # ReLU derivative
-        dw1 = np.dot(X.reshape(-1, 1), dz1.reshape(1, -1))
-        db1 = dz1.sum(axis=0)
+        dw1 = dz1.dot(X.T) 
 
         # Update weights and biases
         self.w2 -= learning_rate * dw2
-        self.b2 -= learning_rate * db2
+        self.b2 -= learning_rate * dz2
         self.w1 -= learning_rate * dw1
-        self.b1 -= learning_rate * db1
+        self.b1 -= learning_rate * dz1
 
         # Compute the loss
         loss = -np.sum(y_one_hot * np.log(a2))
         return loss
     
     def predict(self, X):
-        _, a2 = self.forward(X)
-        return np.argmax(a2, axis=1)
+        _, a2 = self.forward(X.T)
+        return np.argmax(a2, axis=0)
 
     def evaluate(self, X, y):
         """
@@ -154,6 +152,7 @@ class MLP(object):
         total_loss = 0
 
         for x_i, y_i in zip(X, y):
+            x_i = x_i.reshape((-1, 1))
             a1, a2 = self.forward(x_i)
             loss = self.backward(x_i, y_i, a1, a2, learning_rate)
             total_loss += loss
@@ -177,6 +176,7 @@ def plot_loss(epochs, loss):
     plt.ylabel('Loss')
     plt.plot(epochs, loss, label='train')
     plt.legend()
+    plt.savefig('outputloss.png')
     plt.show()
 
 
