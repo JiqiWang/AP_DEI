@@ -67,19 +67,20 @@ class FeedforwardNetwork(nn.Module):
         """
         super().__init__()
         # Implement me!
-        self.layers = nn.ModuleList()
+        self.layers = nn.Sequential()
         self.activation_type = activation_type
-        self.dropout = dropout
+        self.dropout = nn.Dropout(dropout)
 
         # Input layer
         self.layers.append(nn.Linear(n_features, hidden_size))
         self.layers.append(self.get_activation())
+        self.layers.append(self.dropout)
 
         # Hidden layers
         for _ in range(layers - 1):
             self.layers.append(nn.Linear(hidden_size, hidden_size))
             self.layers.append(self.get_activation())
-            self.layers.append(nn.Dropout(p=dropout))
+            self.layers.append(self.dropout)
 
         # Output layer
         self.layers.append(nn.Linear(hidden_size, n_classes))
@@ -92,9 +93,9 @@ class FeedforwardNetwork(nn.Module):
         the output logits from x. This will include using various hidden
         layers, pointwise nonlinear functions, and dropout.
         """
-        for layer in self.layers:
-            x = layer(x)
-        return x
+        #for layer in self.layers:
+        #    x = layer(x)
+        return self.layers(x)
     
     def get_activation(self):
         if self.activation_type == 'relu':
@@ -102,7 +103,7 @@ class FeedforwardNetwork(nn.Module):
         elif self.activation_type == 'tanh':
             return nn.Tanh()
         else:
-            raise ValueError("Invalid activation type. Supported types: 'relu', 'sigmoid', 'tanh'.")
+            raise ValueError("Invalid activation type. Supported types: 'relu' and 'tanh'.")
 
 
 def train_batch(X, y, model, optimizer, criterion, **kwargs):
@@ -124,8 +125,8 @@ def train_batch(X, y, model, optimizer, criterion, **kwargs):
     loss as a numerical value that is not part of the computation graph.
     """
     optimizer.zero_grad()
-    outputs = model(X)
-    loss = criterion(outputs, y)
+    yhat = model(X)
+    loss = criterion(yhat, y)
     loss.backward()
     optimizer.step()
     return loss.item()
@@ -180,7 +181,7 @@ def main():
                         need to change this value for your plots.""")
     parser.add_argument('-batch_size', default=16, type=int,
                         help="Size of training batch.")
-    parser.add_argument('-learning_rate', type=float, default=0.01)
+    parser.add_argument('-learning_rate', type=float, default=0.1)
     parser.add_argument('-l2_decay', type=float, default=0)
     parser.add_argument('-hidden_size', type=int, default=200)
     parser.add_argument('-layers', type=int, default=2)

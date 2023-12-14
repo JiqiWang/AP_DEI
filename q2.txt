@@ -4,14 +4,21 @@
         0.01 - 0.6200
         0.1 - 0.5577
     .2- 
-        a) batch_size = 16: final test acc = 0.7637; time = 1m42.664s
-           batch_size = 1024: final test acc = 0.5331; time = 0m29.742s
+        a) batch_size = 16: final test acc = 0.7505; time = 1m52.613s
+           batch_size = 1024: final test acc = 0.7316; time = 0m40.615s
 
         b) learning_rate = 1; final test acc = 0.4726
            learning_rate = 0.1; final test acc = 0.7505
            learning_rate = 0.01; final test acc = 0.7637
            learning_rate = 0.001; final test acc = 0.7146
 
-        c) final test acc = 0.7864
-           l2_decay = 0.0001; final test acc = 0.7656
-           dropout = 0.2; final test acc = 0.7505
+           best -> 0.01?
+           worst -> 1
+
+        c) there is no overfitting
+           final test acc = 0.7637
+           l2_decay = 0.0001; final test acc = 0.7694
+           dropout = 0.2; final test acc = 0.7845
+
+           best -> dropout
+           worst -> default

@@ -1,1 +1,15 @@
 TOCHECK TO COMPLETE:The function given is a non-linear decision boundary, and it cannot be represented by a single perceptron.
+
+To show that the function f(x) cannot generally be computed with a single perceptron, let's consider a simple counter-example.
+
+A single perceptron can only produce linear decision boundaries, separating the input space into two regions. However, the function f(x) involves a non-linear decision boundary, where the output depends on the summation of the input variables.
+
+For example, consider the case where D=2, A=1, and B=1. We have four possible input combinations:
+
+x = (-1, -1) - Sum = -2
+x = (-1, 1) - Sum = 0
+x = (1, -1) - Sum = 0
+x = (1, 1) - Sum = 2
+In this case, the decision boundary for f(x) is non-linear and cannot be represented by a single perceptron. The output of f(x) depends on the summation of the input variables, which cannot be captured by a single linear decision boundary.
+
+Therefore, it is not generally possible to compute the function f(x) with a single perceptron due to the non-linearity of the decision boundary required to represent the function. Instead, a multilayer perceptron with non-linear activation functions would be needed to effectively compute the given Boolean function.
