@@ -22,36 +22,62 @@ class CNN(nn.Module):
         self.no_maxpool = no_maxpool
         if not no_maxpool:
             # Implementation for Q2.1
-            raise NotImplementedError
+            # First convolutional block
+            self.conv1 = nn.Conv2d(in_channels=1, out_channels=8, kernel_size=3, stride=1, padding=1)
+            # Second convolutional block
+            self.conv2 = nn.Conv2d(in_channels=8, out_channels=16, kernel_size=3, stride=1, padding=0)
+            # Activation function
+            self.relu = nn.ReLU()
+            # Max pool
+            self.pool = nn.MaxPool2d(kernel_size=2, stride=2)
         else:
             # Implementation for Q2.2
-            raise NotImplementedError
+            # First convolutional block
+            self.conv1 = nn.Conv2d(in_channels=1, out_channels=8, kernel_size=3, stride=2, padding=1)
+            # Second convolutional block
+            self.conv2 = nn.Conv2d(in_channels=8, out_channels=16, kernel_size=3, stride=2, padding=0)
+            # Activation function
+            self.relu = nn.ReLU()
         
         # Implementation for Q2.1 and Q2.2
-        raise NotImplementedError
+        # Fully connected layers
+        self.fc1_input_features = 16 * 5 * 5  # Calculate based on the output size of the second convolutional block
+        self.fc1 = nn.Linear(self.fc1_input_features, 320)
+        self.fc2 = nn.Linear(320, 120)
+        self.fc3 = nn.Linear(120, 4)
+        
+        # Dropout layer
+        self.drop = nn.Dropout(p=dropout_prob)
         
     def forward(self, x):
         # input should be of shape [b, c, w, h]
         # conv and relu layers
+        x = self.conv1(x)
+        x = self.relu(x)
 
         # max-pool layer if using it
         if not self.no_maxpool:
-            raise NotImplementedError
+            x = self.pool(x)
         
         # conv and relu layers
-        
+        x = self.conv2(x)
+        x = self.relu(x)
 
         # max-pool layer if using it
         if not self.no_maxpool:
-            raise NotImplementedError
+            x = self.pool(x)
         
         # prep for fully connected layer + relu
+        x = x.view(-1, self.fc1_input_features)
         
+        x = self.relu(self.fc1(x))
+
         # drop out
         x = self.drop(x)
 
         # second fully connected layer + relu
-        
+        x = self.relu(self.fc2(x))
+
         # last fully connected layer
         x = self.fc3(x)
         
@@ -103,7 +129,7 @@ def plot(epochs, plottable, ylabel='', name=''):
 
 def get_number_trainable_params(model):
     ## TO IMPLEMENT - REPLACE return 0
-    return 0
+    return sum(p.numel() for p in model.parameters() if p.requires_grad)
 
 
 def main():
@@ -132,6 +158,12 @@ def main():
     dev_X, dev_y = dataset.dev_X, dataset.dev_y
     test_X, test_y = dataset.test_X, dataset.test_y
 
+    batch_idx, (example_imgs, example_targets) = next(enumerate(train_dataloader))
+    # info about the dataset
+    D_in = np.prod(example_imgs.shape[1:])
+    D_out = len(train_dataloader.dataset.dev_y.unique())
+    print("N input features:", D_in, "Output classes:", D_out)
+    
     # initialize the model
     model = CNN(opt.dropout, no_maxpool=opt.no_maxpool)
     
