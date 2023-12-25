@@ -1,0 +1,49 @@
+jiqiuwu@uwu:~/AP/hw/hw2$ python3 hw2-q2.py -epochs 15 -learning_rate 0.01 -optimizer sgd
+N input features: 784 Output classes: 4
+Training epoch 1
+Training loss: 1.1107
+Valid acc: 0.6792
+Training epoch 2
+Training loss: 0.9443
+Valid acc: 0.7031
+Training epoch 3
+Training loss: 0.8420
+Valid acc: 0.8141
+Training epoch 4
+Training loss: 0.7750
+Valid acc: 0.8196
+Training epoch 5
+Training loss: 0.7268
+Valid acc: 0.8386
+Training epoch 6
+Training loss: 0.6895
+Valid acc: 0.8398
+Training epoch 7
+Training loss: 0.6603
+Valid acc: 0.8009
+Training epoch 8
+Training loss: 0.6360
+Valid acc: 0.8493
+Training epoch 9
+Training loss: 0.6159
+Valid acc: 0.8533
+Training epoch 10
+Training loss: 0.5988
+Valid acc: 0.8553
+Training epoch 11
+Training loss: 0.5838
+Valid acc: 0.8583
+Training epoch 12
+Training loss: 0.5707
+Valid acc: 0.8577
+Training epoch 13
+Training loss: 0.5591
+Valid acc: 0.8653
+Training epoch 14
+Training loss: 0.5487
+Valid acc: 0.8683
+Training epoch 15
+Training loss: 0.5391
+Valid acc: 0.8646
+Final Test acc: 0.8393
+Number of trainable parameters:  224892
