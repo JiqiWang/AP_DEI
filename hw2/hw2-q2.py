@@ -48,53 +48,42 @@ class CNN(nn.Module):
         
         # Dropout layer
         self.drop = nn.Dropout(p=dropout_prob)
-        self.log_softmax = nn.LogSoftmax(dim=-1)
-
+        
         
     def forward(self, x):
         # input should be of shape [b, c, w, h]
         # conv and relu layers 
-
-        x = x.reshape(-1, 1, 28, 28)
-        #print("After reshape:", x.size())
-
+        x = x.view(x.shape[0], 1, 28, 28)
         x = self.conv1(x)
         x = self.relu(x)
-        #print("After conv1:", x.size())
 
         # max-pool layer if using it
         if not self.no_maxpool:
             x = self.pool(x)
-            #print("After maxpool1:", x.size())
 
         # conv and relu layers
         x = self.conv2(x)
         x = self.relu(x)
-        #print("After conv2:", x.size())
 
         # max-pool layer if using it
         if not self.no_maxpool:
             x = self.pool(x)
-            #print("After maxpool2:", x.size())
-
 
         # prep for fully connected layer + relu
+        # eu corri os graficos com esta linha de codigo mas da igual por isso deixei comentado x = torch.flatten(x, 1)
         x = x.view(-1, self.fc1_input_features)
-        #print("Before fc1:", x.size())
         x = self.relu(self.fc1(x))
 
         # drop out
         x = self.drop(x)
-        #print("After drop:", x.size())
 
         # second fully connected layer + relu
         x = self.relu(self.fc2(x))
 
         # last fully connected layer
         x = self.fc3(x)
-        x = self.log_softmax(x)
         
-        return x
+        return F.log_softmax(x, dim=1)
     
     
 def train_batch(X, y, model, optimizer, criterion, **kwargs):

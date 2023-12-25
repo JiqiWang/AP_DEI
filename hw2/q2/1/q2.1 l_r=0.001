@@ -1,4 +1,4 @@
-python3 hw2-q2.py -epochs 15 -learning_rate 0.001 -optimizer sgd
+jiqiuwu@uwu:~/AP/hw/hw2$ python3 hw2-q2.py -epochs 15 -learning_rate 0.001 -optimizer sgd
 N input features: 784 Output classes: 4
 Training epoch 1
 Training loss: 1.1845
