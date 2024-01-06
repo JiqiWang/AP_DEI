@@ -1,0 +1,1037 @@
+[1]
+train:
+[1,   30] loss: 3.629
+[1,   60] loss: 3.439
+[1,   90] loss: 3.277
+[1,  120] loss: 3.147
+[1,  150] loss: 3.019
+
+validation:
+jaccard_similarity
+0.132
+
+cosine_similarity
+0.235
+
+damerau-levenshtein_similarity
+0.174
+
+loss
+2.936
+
+compare-text-gen:
+target: <he accused his wife of preferring others to himself and told her to return to the soviet union wi>
+pred:   <e o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o>
+
+target: <at the same time he professed his love for her and said that he could not get along without her.>
+pred:   <e o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o>
+
+target: <marina oswald thought that he would not be happy anywhere, quote, only on the moon, perhaps, end >
+pred:   <e o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o>
+
+target: <while oswald appeared to most of those who knew him as a meek and harmless person, he sometimes i>
+pred:   <e o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o>
+
+target: <and, apparently seriously, as a political prophet -- a man who said that after twenty years he wo>
+pred:   <e o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o>
+
+target: <his wife testified that he compared himself with great readers of history.>
+pred:   <e o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o>
+
+target: <such ideas of grandeur were apparently accompanied by notions of oppression.>
+pred:   <e o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o>
+
+target: <he had a great hostility toward his environment, whatever it happened to be,>
+pred:   <e o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o>
+
+target: <which he expressed in striking and sometimes violent acts long before the assassination.>
+pred:   <e o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o>
+
+target: <there was some quality about him that led him to act with an apparent disregard for possible cons>
+pred:   <e o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o>
+
+target: <he defected to the soviet union, shot at general walker, tried to go to cuba and even contemplate>
+pred:   <e o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o>
+
+target: <he assassinated the president, shot officer tippit, resisted arrest and tried to kill another pol>
+pred:   <e o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o>
+
+target: <oswald apparently started reading about communism when he was about fifteen.>
+pred:   <e o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o>
+
+target: <in the marines, he evidenced a strong conviction as to the correctness of marxist doctrine,>
+pred:   <e o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o>
+
+target: <which one associate described as, quote, irrevocable, end quote, but also as, quote, theoretical,>
+pred:   <e o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o>
+
+
+
+[2]
+train:
+[2,   30] loss: 2.593
+[2,   60] loss: 2.413
+[2,   90] loss: 2.379
+[2,  120] loss: 2.360
+[2,  150] loss: 2.350
+
+validation:
+jaccard_similarity
+0.234
+
+cosine_similarity
+0.379
+
+damerau-levenshtein_similarity
+0.261
+
+loss
+2.330
+
+compare-text-gen:
+target: <he accused his wife of preferring others to himself and told her to return to the soviet union wi>
+pred:   <the the the the t the the the the the the the the the the the the the the the the the the the the>
+
+target: <at the same time he professed his love for her and said that he could not get along without her.>
+pred:   <the the the the the the the the the the the the the the the the the the the the the the the the t>
+
+target: <marina oswald thought that he would not be happy anywhere, quote, only on the moon, perhaps, end >
+pred:   <the the the the the the the the the the the the the the the the the the the the the the the the t>
+
+target: <while oswald appeared to most of those who knew him as a meek and harmless person, he sometimes i>
+pred:   <the the the the the the the the the the the the the the the the the the the the the the the the t>
+
+target: <and, apparently seriously, as a political prophet -- a man who said that after twenty years he wo>
+pred:   <the the the the t the the the the the the the the the the the the the the the the the the the the>
+
+target: <his wife testified that he compared himself with great readers of history.>
+pred:   <the the the the the the the the the the the the the the the the the the the the the the the the t>
+
+target: <such ideas of grandeur were apparently accompanied by notions of oppression.>
+pred:   <the the the the the the the the the the the the the the the the the the the the the the the the t>
+
+target: <he had a great hostility toward his environment, whatever it happened to be,>
+pred:   <the the the the the the the the the the the the the the the the the the the the the the the the t>
+
+target: <which he expressed in striking and sometimes violent acts long before the assassination.>
+pred:   <the the the the t the the the the the the the the the the the the the the the the the the the the>
+
+target: <there was some quality about him that led him to act with an apparent disregard for possible cons>
+pred:   <the the the the the the the the the the the the the the the the the the the the the the the the t>
+
+target: <he defected to the soviet union, shot at general walker, tried to go to cuba and even contemplate>
+pred:   <the the the the t the the the the the the the the the the the the the the the the the the the the>
+
+target: <he assassinated the president, shot officer tippit, resisted arrest and tried to kill another pol>
+pred:   <the the the the t the the the the the the the the the the the the the the the the the the the the>
+
+target: <oswald apparently started reading about communism when he was about fifteen.>
+pred:   <the the the the the the the the the the the the the the the the the the the the the the the the t>
+
+target: <in the marines, he evidenced a strong conviction as to the correctness of marxist doctrine,>
+pred:   <the the the the t the the the the the the the the the the the the the the the the the the the the>
+
+target: <which one associate described as, quote, irrevocable, end quote, but also as, quote, theoretical,>
+pred:   <the the the the the the the the the the the the the the the the the the the the the the the the t>
+
+
+
+[3]
+train:
+/usr/local/lib/python3.10/dist-packages/torch/optim/lr_scheduler.py:149: UserWarning: The epoch parameter in `scheduler.step()` was not necessary and is being deprecated where possible. Please use `scheduler.step()` to step the scheduler. During the deprecation, if epoch is different from None, the closed form is used instead of the new chainable form, where available. Please open an issue if you are unable to replicate your use case: https://github.com/pytorch/pytorch/issues/new/choose.
+  warnings.warn(EPOCH_DEPRECATION_WARNING, UserWarning)
+[3,   30] loss: 2.334
+[3,   60] loss: 2.325
+[3,   90] loss: 2.329
+[3,  120] loss: 2.316
+[3,  150] loss: 2.297
+
+validation:
+jaccard_similarity
+0.234
+
+cosine_similarity
+0.379
+
+damerau-levenshtein_similarity
+0.262
+
+loss
+2.297
+
+compare-text-gen:
+target: <he accused his wife of preferring others to himself and told her to return to the soviet union wi>
+pred:   <the the the the the the the the t the the t the the the the the t the the the t the the the the t>
+
+target: <at the same time he professed his love for her and said that he could not get along without her.>
+pred:   <the the the the the the the the t the the t the the the the the t the t the the the the the the t>
+
+target: <marina oswald thought that he would not be happy anywhere, quote, only on the moon, perhaps, end >
+pred:   <the the the the the the the the t the the t the the the the the t the the the t the the the the t>
+
+target: <while oswald appeared to most of those who knew him as a meek and harmless person, he sometimes i>
+pred:   <the the the the the the the the t the the t the the the the the t the the the t the the the the t>
+
+target: <and, apparently seriously, as a political prophet -- a man who said that after twenty years he wo>
+pred:   <the the the the the the the the t the the t the the the the the t the t the the the the the the t>
+
+target: <his wife testified that he compared himself with great readers of history.>
+pred:   <the the the the the the the the t the the t the t the the the the t t the the t the the the the t>
+
+target: <such ideas of grandeur were apparently accompanied by notions of oppression.>
+pred:   <the the the the the the the the t the the t the the the the the t the t the the the the the the t>
+
+target: <he had a great hostility toward his environment, whatever it happened to be,>
+pred:   <the the the the the the the the t the the t the the the the the t the t the the the the the the t>
+
+target: <which he expressed in striking and sometimes violent acts long before the assassination.>
+pred:   <the the the the the the the the t the the t the the the the the t the t the the the the the the t>
+
+target: <there was some quality about him that led him to act with an apparent disregard for possible cons>
+pred:   <the the the the the the the the t the the t the the the the the t the t the the the the the the t>
+
+target: <he defected to the soviet union, shot at general walker, tried to go to cuba and even contemplate>
+pred:   <the the the the the the the the t the the t the the the the the t the t the the the the the the t>
+
+target: <he assassinated the president, shot officer tippit, resisted arrest and tried to kill another pol>
+pred:   <the the the the the the the the t the the t the the the the the t the t the the the the the the t>
+
+target: <oswald apparently started reading about communism when he was about fifteen.>
+pred:   <the the the the the the the the t the the t the the the the the t the t the the the the the the t>
+
+target: <in the marines, he evidenced a strong conviction as to the correctness of marxist doctrine,>
+pred:   <the the the the the the the the t the the t the the the the the t the t the the the the the the t>
+
+target: <which one associate described as, quote, irrevocable, end quote, but also as, quote, theoretical,>
+pred:   <the the the the the the the the t the the t the the the the the t the the the t the the the the t>
+
+
+
+[4]
+train:
+[4,   30] loss: 2.314
+[4,   60] loss: 2.263
+[4,   90] loss: 2.269
+[4,  120] loss: 2.236
+[4,  150] loss: 2.203
+
+validation:
+jaccard_similarity
+0.394
+
+cosine_similarity
+0.562
+
+damerau-levenshtein_similarity
+0.287
+
+loss
+2.159
+
+compare-text-gen:
+target: <he accused his wife of preferring others to himself and told her to return to the soviet union wi>
+pred:   <it he the the the the was the was the the the the the are the ad the ar the are the ade the adere>
+
+target: <at the same time he professed his love for her and said that he could not get along without her.>
+pred:   <and secente the the the the was was ound the the as the the the the the the the the wade the the >
+
+target: <marina oswald thought that he would not be happy anywhere, quote, only on the moon, perhaps, end >
+pred:   <whe was os of the the the was alle and and and ard the was alll ond ond and and of and and therer>
+
+target: <while oswald appeared to most of those who knew him as a meek and harmless person, he sometimes i>
+pred:   <whos was of was of the was the the the as ad and as and and a a as a a and as as a and a a as a a>
+
+target: <and, apparently seriously, as a political prophet -- a man who said that after twenty years he wo>
+pred:   <and the the was the se seat sere and and ate and a the and and and athe at and and and and and at>
+
+target: <his wife testified that he compared himself with great readers of history.>
+pred:   <is and the the the the the the the the the the the the the the the the the t the the the the the >
+
+target: <such ideas of grandeur were apparently accompanied by notions of oppression.>
+pred:   <she cone the the was ard ward and the the the the the the the the the the the the the the the the>
+
+target: <he had a great hostility toward his environment, whatever it happened to be,>
+pred:   <in the the was the was was ound the the the the are the the the the the the the the the the the t>
+
+target: <which he expressed in striking and sometimes violent acts long before the assassination.>
+pred:   <whis the seres the se the ad ad ad ad as and and a the and as and and and aste the and and as all>
+
+target: <there was some quality about him that led him to act with an apparent disregard for possible cons>
+pred:   <there was of the was alle the the the the the the the the the ade the the the the the the ware th>
+
+target: <he defected to the soviet union, shot at general walker, tried to go to cuba and even contemplate>
+pred:   <it he the the the sead the the the the the the the the the and wad the the the the the t the t th>
+
+target: <he assassinated the president, shot officer tippit, resisted arrest and tried to kill another pol>
+pred:   <is and the as and the the the the sead sthe se the the the ase the ase ad the the ad the the the >
+
+target: <oswald apparently started reading about communism when he was about fifteen.>
+pred:   <as allle the the the cone the ar and the ad ad the the the the the the the the the the the t t th>
+
+target: <in the marines, he evidenced a strong conviction as to the correctness of marxist doctrine,>
+pred:   <in the the was the the sead seand the the se the ad the the ad the the the the the the the t t th>
+
+target: <which one associate described as, quote, irrevocable, end quote, but also as, quote, theoretical,>
+pred:   <the the secon se the se the the ad the was ad the as ard as ad was as and as as and and and and a>
+
+
+
+[5]
+train:
+[5,   30] loss: 2.142
+[5,   60] loss: 2.099
+[5,   90] loss: 2.062
+[5,  120] loss: 1.989
+[5,  150] loss: 1.950
+
+validation:
+jaccard_similarity
+0.561
+
+cosine_similarity
+0.717
+
+damerau-levenshtein_similarity
+0.350
+
+loss
+1.929
+
+compare-text-gen:
+target: <he accused his wife of preferring others to himself and told her to return to the soviet union wi>
+pred:   <he che was to was was frefre fremere of the sement and al and the sore the the was in the warer w>
+
+target: <at the same time he professed his love for her and said that he could not get along without her.>
+pred:   <at the sent to the foustins of the res of and as and the the palow the the the warthe there.>
+
+target: <marina oswald thought that he would not be happy anywhere, quote, only on the moon, perhaps, end >
+pred:   <who walls was of the the aling the neat and ware and wart are all wo the and the ward thout ad th>
+
+target: <while oswald appeared to most of those who knew him as a meek and harmless person, he sometimes i>
+pred:   <whous was wall the the the poson to the was in mand the arre ar as the and the sent the o the the>
+
+target: <and, apparently seriously, as a political prophet -- a man who said that after twenty years he wo>
+pred:   <and the are of seres was was las was a a low the prout and and the and the the and the or the the>
+
+target: <his wife testified that he compared himself with great readers of history.>
+pred:   <is was the fis the pot the pare and the so was was was the was the istre in for the corer.>
+
+target: <such ideas of grandeur were apparently accompanied by notions of oppression.>
+pred:   <suchad the pres reand rear ward arde the ard the and the couse pring the to the prentionte.>
+
+target: <he had a great hostility toward his environment, whatever it happened to be,>
+pred:   <he and recate stion to the in the was the was the ard a the parout the the the pain.>
+
+target: <which he expressed in striking and sometimes violent acts long before the assassination.>
+pred:   <whit he st secres to in sure in in ison the as of the and a sund a the was the the is the sto hea>
+
+target: <there was some quality about him that led him to act with an apparent disregard for possible cons>
+pred:   <the reswal of the and the the the the pand the the part of the cour the of the cour the was the c>
+
+target: <he defected to the soviet union, shot at general walker, tried to go to cuba and even contemplate>
+pred:   <he sectitent to the sin the hin hing hing hat hat hand hal wal was the che to the come ich ich in>
+
+target: <he assassinated the president, shot officer tippit, resisted arrest and tried to kill another pol>
+pred:   <hesse sexent the the pris of the shous of the stich to the was res resided are and a theres ant o>
+
+target: <oswald apparently started reading about communism when he was about fifteen.>
+pred:   <oswald the are are stare sting reand was and the was of was the he his in the fing.>
+
+target: <in the marines, he evidenced a strong conviction as to the correctness of marxist doctrine,>
+pred:   <in the ware st and anestren strow the the chas and the pris and the sin the or as and the presto >
+
+target: <which one associate described as, quote, irrevocable, end quote, but also as, quote, theoretical,>
+pred:   <which his sof the the st the seas of as wart as a a a prowas and the por the the se profousse the>
+
+
+
+[6]
+train:
+[6,   30] loss: 1.892
+[6,   60] loss: 1.848
+[6,   90] loss: 1.811
+[6,  120] loss: 1.744
+[6,  150] loss: 1.694
+
+validation:
+jaccard_similarity
+0.635
+
+cosine_similarity
+0.776
+
+damerau-levenshtein_similarity
+0.404
+
+loss
+1.691
+
+compare-text-gen:
+target: <he accused his wife of preferring others to himself and told her to return to the soviet union wi>
+pred:   <he comstes ware frefer fring the were of the sall for the sall arred to the in was of mome m he w>
+
+target: <at the same time he professed his love for her and said that he could not get along without her.>
+pred:   <at the sainted the preffes lothe frer prome and at not of the not of the comon.>
+
+target: <marina oswald thought that he would not be happy anywhere, quote, only on the moon, perhaps, end >
+pred:   <moreing oswal the fout the wen the wen by had whout and wo the wo the would wo howe bre happere h>
+
+target: <while oswald appeared to most of those who knew him as a meek and harmless person, he sometimes i>
+pred:   <walls was wall and pered the was the was of many many of the har mor spres pres and the the the s>
+
+target: <and, apparently seriously, as a political prophet -- a man who said that after twenty years he wo>
+pred:   <and a sere severy sires we latt crople prock one the man sand and the sand and at a a afreee he r>
+
+target: <his wife testified that he compared himself with great readers of history.>
+pred:   <his wat that the went the pecomment pare cound pring were in arre spered the ispred.>
+
+target: <such ideas of grandeur were apparently accompanied by notions of oppression.>
+pred:   <safaing the des amere were were pare licang pand not nothe prations who prechan.>
+
+target: <he had a great hostility toward his environment, whatever it happened to be,>
+pred:   <he had reat his to the the den the mare dent, which appent the baken beeen.>
+
+target: <which he expressed in striking and sometimes violent acts long before the assassination.>
+pred:   <which spress the strany strany and some and a land a dempted abor in a for the sas nechation.>
+
+target: <there was some quality about him that led him to act with an apparent disregard for possible cons>
+pred:   <there so comoted the ban the lante of the him the paring the parint the pare por for the of co pa>
+
+target: <he defected to the soviet union, shot at general walker, tried to go to cuba and even contemplate>
+pred:   <he defated to the dis a demen whing neen wal aw apper, the were wate tre which ad whow ad he he p>
+
+target: <he assassinated the president, shot officer tippit, resisted arrest and tried to kill another pol>
+pred:   <he sesse necated the bres of the she his a seret the dith the secor the rest, and a and the aned >
+
+target: <oswald apparently started reading about communism when he was about fifteen.>
+pred:   <oswald he pare stared the reepon reen whin was amon of the was a bee fie feeen.>
+
+target: <in the marines, he evidenced a strong conviction as to the correctness of marxist doctrine,>
+pred:   <in whore and strom han strom pand the pain becking of the prect mor the mas borther sectrent.>
+
+target: <which one associate described as, quote, irrevocable, end quote, but also as, quote, theoretical,>
+pred:   <which he so secated the sprives, whire a pon could, and who the prope, buse was as of the pe pero>
+
+
+
+[7]
+train:
+[7,   30] loss: 1.621
+[7,   60] loss: 1.567
+[7,   90] loss: 1.561
+[7,  120] loss: 1.503
+[7,  150] loss: 1.478
+
+validation:
+jaccard_similarity
+0.668
+
+cosine_similarity
+0.800
+
+damerau-levenshtein_similarity
+0.458
+
+loss
+1.491
+
+compare-text-gen:
+target: <he accused his wife of preferring others to himself and told her to return to the soviet union wi>
+pred:   <he exew to his warfe frefor fring ot of ther sele fe, and the old earr to the some in win win wit>
+
+target: <at the same time he professed his love for her and said that he could not get along without her.>
+pred:   <at the same to hem ight restencle of pror and seved that the not kin out callowe ther.>
+
+target: <marina oswald thought that he would not be happy anywhere, quote, only on the moon, perhaps, end >
+pred:   <mreen on oswald faut the becon we hat be had nor ward, alliar, alling wo a mor haper haporthaport>
+
+target: <while oswald appeared to most of those who knew him as a meek and harmless person, he sometimes i>
+pred:   <whose wall not pered to most the was on in he mase nemas and harles present he come the on tan th>
+
+target: <and, apparently seriously, as a political prophet -- a man who said that after twenty years he wo>
+pred:   <and harried sereas resly as of latted on the mand new mand nesent the at a rearse he he reeade wi>
+
+target: <his wife testified that he compared himself with great readers of history.>
+pred:   <his wiftested of of one that the compare himsse of wereaters of his treestred.>
+
+target: <such ideas of grandeur were apparently accompanied by notions of oppression.>
+pred:   <such and deseves a render were parre pompaning not no notions of a prechan.>
+
+target: <he had a great hostility toward his environment, whatever it happened to be,>
+pred:   <he had a great ostal it to reas no by round the abor haver have having batee.>
+
+target: <which he expressed in striking and sometimes violent acts long before the assassination.>
+pred:   <which he accress tras trang in en enesid by a ackes, lond acts, lon backs, lon be for the for fic>
+
+target: <there was some quality about him that led him to act with an apparent disregard for possible cons>
+pred:   <there resmon callot ime by that led hat led had have and pared the win parre the ward the cor con>
+
+target: <he defected to the soviet union, shot at general walker, tried to go to cuba and even contemplate>
+pred:   <he defat dight the so the shough ad new at shan ot a warke to the were to che ould end ing and ne>
+
+target: <he assassinated the president, shot officer tippit, resisted arrest and tried to kill another pol>
+pred:   <he esesss on had bress the went shout has hat of as the bet the rested rest and the coulle nt on >
+
+target: <oswald apparently started reading about communism when he was about fifteen.>
+pred:   <oswald parred in starding read reage no in he was a mony was a bot he was a deeen.>
+
+target: <in the marines, he evidenced a strong conviction as to the correctness of marxist doctrine,>
+pred:   <in the moreans, had and and stron the cond the cor as the of the crect of marcess exessed doctree>
+
+target: <which one associate described as, quote, irrevocable, end quote, but also as, quote, theoretical,>
+pred:   <which was so soced the surivess, who the ir a revel, and were the were could fereant reand or rea>
+
+
+
+[8]
+train:
+[8,   30] loss: 1.416
+[8,   60] loss: 1.384
+[8,   90] loss: 1.368
+[8,  120] loss: 1.353
+[8,  150] loss: 1.347
+
+validation:
+jaccard_similarity
+0.705
+
+cosine_similarity
+0.826
+
+damerau-levenshtein_similarity
+0.515
+
+loss
+1.372
+
+compare-text-gen:
+target: <he accused his wife of preferring others to himself and told her to return to the soviet union wi>
+pred:   <he extes way for for for for and others to been tilter to reter teretarnt of the so vinght ing, b>
+
+target: <at the same time he professed his love for her and said that he could not get along without her.>
+pred:   <at this same time proffestes loof pror rear, and seved that he gould who allow ther.>
+
+target: <marina oswald thought that he would not be happy anywhere, quote, only on the moon, perhaps, end >
+pred:   <moreinal fouse wat the with not not be have be an were could amove ome would a moveracts, and who>
+
+target: <while oswald appeared to most of those who knew him as a meek and harmless person, he sometimes i>
+pred:   <while oswald of a peard to the was win tho nembes ad mean harlose pres and he some tin ting the d>
+
+target: <and, apparently seriously, as a political prophet -- a man who said that after twenty years he wo>
+pred:   <and a pariely, as we as of plit compe of a croped, a mand whis ad the at a resed hears he weares >
+
+target: <his wife testified that he compared himself with great readers of history.>
+pred:   <his whiftested of out on the compared his for he breaters of his trit.>
+
+target: <such ideas of grandeur were apparently accompanied by notions of oppression.>
+pred:   <such and deas of her were or pare pare the compan ishould apprection.>
+
+target: <he had a great hostility toward his environment, whatever it happened to be,>
+pred:   <he had a great of lity to ordison by a reat haver a hat the depine.>
+
+target: <which he expressed in striking and sometimes violent acts long before the assassination.>
+pred:   <which he express drat ins friging a so thems a by agal daces, lown bordiess as nation.>
+
+target: <there was some quality about him that led him to act with an apparent disregard for possible cons>
+pred:   <there was so calot he bout them the led intimed with and parint desly bor of are of a cose onse.>
+
+target: <he defected to the soviet union, shot at general walker, tried to go to cuba and even contemplate>
+pred:   <he diffected to the so vie in when it shout at it who do a cribt to ew it and in the and he the d>
+
+target: <he assassinated the president, shot officer tippit, resisted arrest and tried to kill another pol>
+pred:   <he esessen it the pres the with a chappe of as it resident resist resid, and fictial on no plelin>
+
+target: <oswald apparently started reading about communism when he was about fifteen.>
+pred:   <oswald of pared the starty read read reas om of man he was a bout feen.>
+
+target: <in the marines, he evidenced a strong conviction as to the correctness of marxist doctrine,>
+pred:   <in the moreans, he at is trown convecion as the cor accres of mr. sis evemarces ductrin.>
+
+target: <which one associate described as, quote, irrevocable, end quote, but also as, quote, theoretical,>
+pred:   <which whon as he crives who thes, who ho have who have or a cose of feret reating refor retital a>
+
+
+
+[9]
+train:
+[9,   30] loss: 1.299
+[9,   60] loss: 1.284
+[9,   90] loss: 1.270
+[9,  120] loss: 1.259
+[9,  150] loss: 1.247
+
+validation:
+jaccard_similarity
+0.723
+
+cosine_similarity
+0.838
+
+damerau-levenshtein_similarity
+0.547
+
+loss
+1.294
+
+compare-text-gen:
+target: <he accused his wife of preferring others to himself and told her to return to the soviet union wi>
+pred:   <he chese to sissed which profering others to been tial hard to reture terion the sove hod the wit>
+
+target: <at the same time he professed his love for her and said that he could not get along without her.>
+pred:   <at this same time profestis lof per rever and seved the good call ong the gall ow thoughough hire>
+
+target: <marina oswald thought that he would not be happy anywhere, quote, only on the moon, perhaps, end >
+pred:   <moreinal fall falt falt the in webe have have be any were coute, all imove of dracts,>
+
+target: <while oswald appeared to most of those who knew him as a meek and harmless person, he sometimes i>
+pred:   <whilas wald appeared tome to the was hon new himme has a me are losperson he some to onentimeness>
+
+target: <and, apparently seriously, as a political prophet -- a man who said that after twenty years he wo>
+pred:   <and a parely, serias supplit colit comprical proped, und that the a fires he wenty-eirs seevened >
+
+target: <his wife testified that he compared himself with great readers of history.>
+pred:   <his whiftestipon that that that comese of with oreaders of his of his tright read.>
+
+target: <such ideas of grandeur were apparently accompanied by notions of oppression.>
+pred:   <such as a wre and grenter were or pared by companioutions of a precions of a precion.>
+
+target: <he had a great hostility toward his environment, whatever it happened to be,>
+pred:   <he had a great of lity to orgessing by with aver it haver a happied.>
+
+target: <which he expressed in striking and sometimes violent acts long before the assassination.>
+pred:   <which he a spresed in and suregance ontimes by acts, long acts, long beforidy.>
+
+target: <there was some quality about him that led him to act with an apparent disregard for possible cons>
+pred:   <there was compalatiave boutime that led him to agave with a cour for of a gare for for opossids.>
+
+target: <he defected to the soviet union, shot at general walker, tried to go to cuba and even contemplate>
+pred:   <he dit the to the so vade he have ight jaid all on of a good good who dook and he gin the coun th>
+
+target: <he assassinated the president, shot officer tippit, resisted arrest and tried to kill another pol>
+pred:   <he as son hat the pres not shot a shot of as it bet the bet the resist dit and hilling on of l no>
+
+target: <oswald apparently started reading about communism when he was about fifteen.>
+pred:   <oswald oper it a startied reading about commminas ome of a bot fifteen,>
+
+target: <in the marines, he evidenced a strong conviction as to the correctness of marxist doctrine,>
+pred:   <in the morians, had in sto strong convich the che prect the crect nesubic assess docturire.>
+
+target: <which one associate described as, quote, irrevocable, end quote, but also as, quote, theoretical,>
+pred:   <which on a socccrived thas crivess, whoted ireval, and who a so as pose feretive ret of a renthe >
+
+
+
+[10]
+train:
+[10,   30] loss: 1.209
+[10,   60] loss: 1.199
+[10,   90] loss: 1.206
+[10,  120] loss: 1.201
+[10,  150] loss: 1.202
+
+validation:
+jaccard_similarity
+0.725
+
+cosine_similarity
+0.839
+
+damerau-levenshtein_similarity
+0.556
+
+loss
+1.273
+
+compare-text-gen:
+target: <he accused his wife of preferring others to himself and told her to return to the soviet union wi>
+pred:   <he accused is wayd fring other in others to your ter turnt terer tuntant the so has of the s ove >
+
+target: <at the same time he professed his love for her and said that he could not get along without her.>
+pred:   <at this same time prefestastas lofer rear anse a that he gat it a not gattel wold thoughoughour.>
+
+target: <marina oswald thought that he would not be happy anywhere, quote, only on the moon, perhaps, end >
+pred:   <morinal oswald falt the would not newar, quote, almamiar, who a mome whom whomome who driall d fo>
+
+target: <while oswald appeared to most of those who knew him as a meek and harmless person, he sometimes i>
+pred:   <while all nepured to most of those who ne hamas a mes prerson he lispresomed he some thentinesaid>
+
+target: <and, apparently seriously, as a political prophet -- a man who said that after twenty years he wo>
+pred:   <and a parely, serias leas of priclet criparict on the sad that that a the a when bris he he wew b>
+
+target: <his wife testified that he compared himself with great readers of history.>
+pred:   <his whiftest of of i that he compared amse for it reaters of histrig.>
+
+target: <such ideas of grandeur were apparently accompanied by notions of oppression.>
+pred:   <such ady as a grand ure were were pan of any notions of a presshon.>
+
+target: <he had a great hostility toward his environment, whatever it happened to be,>
+pred:   <he had exell astill a to orgess in by a reat haver it hat hat the demad.>
+
+target: <which he expressed in striking and sometimes violent acts long before the assassination.>
+pred:   <which he express dragain escrieding a lone acts, ongo backs, long be for the asassassassange.>
+
+target: <there was some quality about him that led him to act with an apparent disregard for possible cons>
+pred:   <there was some calod iby that led hat led have aged with and a parint deslem gar for of possibons>
+
+target: <he defected to the soviet union, shot at general walker, tried to go to cuba and even contemplate>
+pred:   <he dit at did to the so vabionial on all on on ow a preve to good who dook and he gin an the the >
+
+target: <he assassinated the president, shot officer tippit, resisted arrest and tried to kill another pol>
+pred:   <he assany he presided the presered to as are to a resit a resist it a rest and he lanonse lellano>
+
+target: <oswald apparently started reading about communism when he was about fifteen.>
+pred:   <oswald a pared istarty reading a by neas ome was a mose of a fifteen.>
+
+target: <in the marines, he evidenced a strong conviction as to the correctness of marxist doctrine,>
+pred:   <in the morings, evidence of in a ching as to the grect nessimar acces assise doptron.>
+
+target: <which one associate described as, quote, irrevocable, end quote, but also as, quote, theoretical,>
+pred:   <which when a sose sucabites crive ireval irevable, and where also is pose was pretical ant art be>
+
+
+
+[11]
+train:
+[11,   30] loss: 1.164
+[11,   60] loss: 1.154
+[11,   90] loss: 1.150
+[11,  120] loss: 1.149
+[11,  150] loss: 1.145
+
+validation:
+jaccard_similarity
+0.739
+
+cosine_similarity
+0.849
+
+damerau-levenshtein_similarity
+0.589
+
+loss
+1.218
+
+compare-text-gen:
+target: <he accused his wife of preferring others to himself and told her to return to the soviet union wi>
+pred:   <he exews to is way for for for and thersto hin salf and tial hard turntant of the sove y youngh a>
+
+target: <at the same time he professed his love for her and said that he could not get along without her.>
+pred:   <at the same time he profestestas lof rerr anse at the good could inot gall would though ther.>
+
+target: <marina oswald thought that he would not be happy anywhere, quote, only on the moon, perhaps, end >
+pred:   <morina oswald fall faut the would not be had be any were who a move move wome wome who pe, f ter >
+
+target: <while oswald appeared to most of those who knew him as a meek and harmless person, he sometimes i>
+pred:   <while as wald appeared to the was ho new himas and hemas and harmles prent he some timsentims in >
+
+target: <and, apparently seriously, as a political prophet -- a man who said that after twenty years he wo>
+pred:   <and a parionly, serious leet cold aclet grophict, on whis ad that at a fich are one when bris wou>
+
+target: <his wife testified that he compared himself with great readers of history.>
+pred:   <his wiftect of oyd that he compared himse of with briers of his of his trigh.>
+
+target: <such ideas of grandeur were apparently accompanied by notions of oppression.>
+pred:   <such and deas a grandure were were paratly companions of a precions of an.>
+
+target: <he had a great hostility toward his environment, whatever it happened to be,>
+pred:   <he had great hostillity to orgison by whet aver it haver it happon demade.>
+
+target: <which he expressed in striking and sometimes violent acts long before the assassination.>
+pred:   <which he exprest in suright in enso thems on thems aby acts, ong of for the for the for forin.>
+
+target: <there was some quality about him that led him to act with an apparent disregard for possible cons>
+pred:   <there was some calotiabout that legime to a led him to and a parint dessly bor for posible conses>
+
+target: <he defected to the soviet union, shot at general walker, tried to go to cuba and even contemplate>
+pred:   <he difected to the so vie in you in man ow all on of a gooker, tribe to exew and the higing the p>
+
+target: <he assassinated the president, shot officer tippit, resisted arrest and tried to kill another pol>
+pred:   <he esassinated the pres the wount, shot officertictipt to a bet rested arrist, and he lelen onoth>
+
+target: <oswald apparently started reading about communism when he was about fifteen.>
+pred:   <oswald apparagerstarding reading a bout commminas of an he was a bout fifteen.>
+
+target: <in the marines, he evidenced a strong conviction as to the correctness of marxist doctrine,>
+pred:   <in the morings, had and and sto stron convection of the crectnes of markness doptron.>
+
+target: <which one associate described as, quote, irrevocable, end quote, but also as, quote, theoretical,>
+pred:   <which one sose such it the as cribed areve ir a revol, and quote, but also as was feeratical f an>
+
+
+
+[12]
+train:
+[12,   30] loss: 1.121
+[12,   60] loss: 1.114
+[12,   90] loss: 1.110
+[12,  120] loss: 1.112
+[12,  150] loss: 1.118
+
+validation:
+jaccard_similarity
+0.748
+
+cosine_similarity
+0.854
+
+damerau-levenshtein_similarity
+0.603
+
+loss
+1.195
+
+compare-text-gen:
+target: <he accused his wife of preferring others to himself and told her to return to the soviet union wi>
+pred:   <he appe huse with for firming others to hins to hind to he sald her terir to the sove yo hisawee >
+
+target: <at the same time he professed his love for her and said that he could not get along without her.>
+pred:   <at the same time he prestastis love per rear, and subat he gat gail owild would withour.>
+
+target: <marina oswald thought that he would not be happy anywhere, quote, only on the moon, perhaps, end >
+pred:   <morina oswald falow the would not not be had be any who the mome whom whom whome whome wald dit.>
+
+target: <while oswald appeared to most of those who knew him as a meek and harmless person, he sometimes i>
+pred:   <while all nepured a piered to those who new himas a me are losperson he centime he some timen mad>
+
+target: <and, apparently seriously, as a political prophet -- a man who said that after twenty years he wo>
+pred:   <and a parily, sinreas leas a suppelit cold he brifict on was said that a the afters he wenty wn b>
+
+target: <his wife testified that he compared himself with great readers of history.>
+pred:   <his wiftestipout of id that he compare himse with brieders of his tright.>
+
+target: <such ideas of grandeur were apparently accompanied by notions of oppression.>
+pred:   <such and es of grandure were were pared leapened by notions of a precion.>
+
+target: <he had a great hostility toward his environment, whatever it happened to be,>
+pred:   <he had great ostill hill have torgess in by rewet happied to bade demay.>
+
+target: <which he expressed in striking and sometimes violent acts long before the assassination.>
+pred:   <which he express dracying and so thems ontimes by acts, ong acts, on befor the for the asing.>
+
+target: <there was some quality about him that led him to act with an apparent disregard for possible cons>
+pred:   <there was some caloty obatime that led hat lege into about and a parint discler for posse of al c>
+
+target: <he defected to the soviet union, shot at general walker, tried to go to cuba and even contemplate>
+pred:   <he diffected to the so vie in you it it shot eigch ad chan aw a cupe of a cupe and he bencouled o>
+
+target: <he assassinated the president, shot officer tippit, resisted arrest and tried to kill another pol>
+pred:   <he as son he had the preside the shot of his aretipt to bet resisted arrist and hilleneret one li>
+
+target: <oswald apparently started reading about communism when he was about fifteen.>
+pred:   <oswald aparaterateratery reading about commminas of whing he was adobout feten.>
+
+target: <in the marines, he evidenced a strong conviction as to the correctness of marxist doctrine,>
+pred:   <in the morings, he addence to stronk conviction of the crectnas of markness doptron.>
+
+target: <which one associate described as, quote, irrevocable, end quote, but also as, quote, theoretical,>
+pred:   <which when a socceit discrive ithes caut ireval, and quote, but also eas pose feretical of f ant >
+
+
+
+[13]
+train:
+[13,   30] loss: 1.085
+[13,   60] loss: 1.085
+[13,   90] loss: 1.091
+[13,  120] loss: 1.088
+[13,  150] loss: 1.078
+
+validation:
+jaccard_similarity
+0.752
+
+cosine_similarity
+0.857
+
+damerau-levenshtein_similarity
+0.613
+
+loss
+1.177
+
+compare-text-gen:
+target: <he accused his wife of preferring others to himself and told her to return to the soviet union wi>
+pred:   <he appe huse with for firm other a the reself and told her turntarnt turnt the sove you in witho >
+
+target: <at the same time he professed his love for her and said that he could not get along without her.>
+pred:   <at the same time he prestastas love per and subanes at the gail ong allow though ther.>
+
+target: <marina oswald thought that he would not be happy anywhere, quote, only on the moon, perhaps, end >
+pred:   <morina oswald fall faate he went not be had be any who mome whom whom whom whome whome wald dile.>
+
+target: <while oswald appeared to most of those who knew him as a meek and harmless person, he sometimes i>
+pred:   <while all nepeard to most of those who ne himmas a mes a me armlos press present he somentimes ad>
+
+target: <and, apparently seriously, as a political prophet -- a man who said that after twenty years he wo>
+pred:   <and a parelay serias leas as a me as a man who man whis add that at at a fitures he wenters hemen>
+
+target: <his wife testified that he compared himself with great readers of history.>
+pred:   <his wiftestived of oud that he compared imself with breaters of his dreate.>
+
+target: <such ideas of grandeur were apparently accompanied by notions of oppression.>
+pred:   <such agas a grandure were were paratly appon by newgn a notions of a precion.>
+
+target: <he had a great hostility toward his environment, whatever it happened to be,>
+pred:   <he had great ostill attel his in by rent whet aver it happoded to bady.>
+
+target: <which he expressed in striking and sometimes violent acts long before the assassination.>
+pred:   <which he express dragaing and so thems ontimes aby acts, ong bove for the assassination.>
+
+target: <there was some quality about him that led him to act with an apparent disregard for possible cons>
+pred:   <there were som callety obat that led hat led have age and a parint disly gor for posse ople const>
+
+target: <he defected to the soviet union, shot at general walker, tried to go to cuba and even contemplate>
+pred:   <he dit fectided to the so vieng it he ot eight chan aw a chad of a cupe of a cup and the on ding >
+
+target: <he assassinated the president, shot officer tippit, resisted arrest and tried to kill another pol>
+pred:   <he assinated the preside whent, shot a chot officertic a bet resist and hight collon the lenereli>
+
+target: <oswald apparently started reading about communism when he was about fifteen.>
+pred:   <oswald aparaterater estarted reading a bout comminag he was a bout fifteen.>
+
+target: <in the marines, he evidenced a strong conviction as to the correctness of marxist doctrine,>
+pred:   <in the morians, eat addence to stron conviction as to the crectnas of marces dopturn.>
+
+target: <which one associate described as, quote, irrevocable, end quote, but also as, quote, theoretical,>
+pred:   <which on a so soccate to scribed as caut ireval ireval, and quote, but also as photh feeretingal >
+
+
+
+[14]
+train:
+[14,   30] loss: 1.066
+[14,   60] loss: 1.061
+[14,   90] loss: 1.065
+[14,  120] loss: 1.070
+[14,  150] loss: 1.055
+
+validation:
+jaccard_similarity
+0.759
+
+cosine_similarity
+0.862
+
+damerau-levenshtein_similarity
+0.625
+
+loss
+1.170
+
+compare-text-gen:
+target: <he accused his wife of preferring others to himself and told her to return to the soviet union wi>
+pred:   <he apped his way for firming others to hind self and told her to returnt of the so he sout h at h>
+
+target: <at the same time he professed his love for her and said that he could not get along without her.>
+pred:   <at the same time he prefestices lof her rear, and seved the get of it out i a would without hod h>
+
+target: <marina oswald thought that he would not be happy anywhere, quote, only on the moon, perhaps, end >
+pred:   <morina oswald fall faut the would not be had be any were quote, on the mome whom whom whom ped wa>
+
+target: <while oswald appeared to most of those who knew him as a meek and harmless person, he sometimes i>
+pred:   <while all nepured to most of those who ne himmas a mes a me armlose preson he sometimes in and ma>
+
+target: <and, apparently seriously, as a political prophet -- a man who said that after twenty years he wo>
+pred:   <and a parely, serias seleas a roplit callit, on the said that the a fituture years he wears she w>
+
+target: <his wife testified that he compared himself with great readers of history.>
+pred:   <his wiftestified that he compared himse of with with breaters of histried.>
+
+target: <such ideas of grandeur were apparently accompanied by notions of oppression.>
+pred:   <such ady as of grandure were were pared leapon the notions of a precion.>
+
+target: <he had a great hostility toward his environment, whatever it happened to be,>
+pred:   <he had great ostillity torgess in by whet wethere it happod bady.>
+
+target: <which he expressed in striking and sometimes violent acts long before the assassination.>
+pred:   <which he expressed, in stragain ensuitimes vine by long acts, ong of for the assassination.>
+
+target: <there was some quality about him that led him to act with an apparent disregard for possible cons>
+pred:   <there was some calloty obt that led hat led him to and with and a parried disly gor for posse con>
+
+target: <he defected to the soviet union, shot at general walker, tried to go to cuba and even contemplate>
+pred:   <he diffected to the so vie in you it enow on ow of a gooker, to go cupe of a cupe and the gigh an>
+
+target: <he assassinated the president, shot officer tippit, resisted arrest and tried to kill another pol>
+pred:   <he assinated the preside the preserticapit, retic a bet resisted arrest and hiculanotic on ot len>
+
+target: <oswald apparently started reading about communism when he was about fifteen.>
+pred:   <oswald apparaterater exarty reading a bout commminanious a bout fifteen.>
+
+target: <in the marines, he evidenced a strong conviction as to the correctness of marxist doctrine,>
+pred:   <in the morings, eat and astrong conviction as to the crectnis of marcys doces dopturn.>
+
+target: <which one associate described as, quote, irrevocable, end quote, but also as, quote, theoretical,>
+pred:   <which on a so soccusied to scrive ireval ireval, and quote, but also as where the reatical f feen>
+
+
+
+[15]
+train:
+[15,   30] loss: 1.051
+[15,   60] loss: 1.049
+[15,   90] loss: 1.058
+[15,  120] loss: 1.042
+[15,  150] loss: 1.048
+
+validation:
+jaccard_similarity
+0.757
+
+cosine_similarity
+0.860
+
+damerau-levenshtein_similarity
+0.625
+
+loss
+1.166
+
+compare-text-gen:
+target: <he accused his wife of preferring others to himself and told her to return to the soviet union wi>
+pred:   <he apped his way for firming others to him self and to his and to the so have yone in win win wit>
+
+target: <at the same time he professed his love for her and said that he could not get along without her.>
+pred:   <at the same time he prefestices lof per rear, and subat he geall ong out allow though thout hod h>
+
+target: <marina oswald thought that he would not be happy anywhere, quote, only on the moon, perhaps, end >
+pred:   <morina oswald fall falt the would not be had be any were quote, on the mome whom whome wald dille>
+
+target: <while oswald appeared to most of those who knew him as a meek and harmless person, he sometimes i>
+pred:   <while all nepured to most of those who new him has a meas a me armlous presen, he some times ade >
+
+target: <and, apparently seriously, as a political prophet -- a man who said that after twenty years he wo>
+pred:   <and a parely, siry as leas a suppelit crifict unct on who sad that at at a fiture years se h woul>
+
+target: <his wife testified that he compared himself with great readers of history.>
+pred:   <his wiftestived of oid that he compared himse for the breaters of histrited.>
+
+target: <such ideas of grandeur were apparently accompanied by notions of oppression.>
+pred:   <such agas a grandure were were paretly appon by newgn of a no supe precion.>
+
+target: <he had a great hostility toward his environment, whatever it happened to be,>
+pred:   <he had great ostill it to orgess in by whet aver it happod baded.>
+
+target: <which he expressed in striking and sometimes violent acts long before the assassination.>
+pred:   <which he expressed, in stragain ensuitimes vimes by a relen daces, on before the assasnasnation.>
+
+target: <there was some quality about him that led him to act with an apparent disregard for possible cons>
+pred:   <there was some calloty obat that fled hat legave age in the nevarint disly gor for posible consor>
+
+target: <he defected to the soviet union, shot at general walker, tried to go to cuba and even contemplate>
+pred:   <he diffected to the so vie in you it engle of a geral on of a to good eaccupe of and the onencunt>
+
+target: <he assassinated the president, shot officer tippit, resisted arrest and tried to kill another pol>
+pred:   <he assinated the preside the preserved shot officertic a bet resist arrest and hid colloner onoth>
+
+target: <oswald apparently started reading about communism when he was about fifteen.>
+pred:   <oswald apparaterater exarty reading a bout commminy he was adough adough fifteen.>
+
+target: <in the marines, he evidenced a strong conviction as to the correctness of marxist doctrine,>
+pred:   <in the morings, have add a been ching ching as to the crectnis of marcys doptron.>
+
+target: <which one associate described as, quote, irrevocable, end quote, but also as, quote, theoretical,>
+pred:   <which on a so soccusied to scrive ireval ireval, and quote, but also as poothere retical fend and>
+
+test:
+{'jaccard_similarity': 0.7655891993523882, 'cosine_similarity': 0.8659430817535804, 'damerau-levenshtein_similarity': 0.6342571813403532, 'loss': 1.1606342610789508}
