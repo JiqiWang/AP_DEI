@@ -26,22 +26,32 @@ class CNN(nn.Module):
             self.conv1 = nn.Conv2d(in_channels=1, out_channels=8, kernel_size=3, stride=1, padding=1)
             # Second convolutional block
             self.conv2 = nn.Conv2d(in_channels=8, out_channels=16, kernel_size=3, stride=1, padding=0)
-            # Activation function
-            self.relu = nn.ReLU()
             # Max pool
             self.pool = nn.MaxPool2d(kernel_size=2, stride=2)
+
+            # output width = [(W−K+2P)/S]+1
+            # output width conv1 = [(28-3+2*1)/1]+1 = 28
+            # output width max_pool1 = [(28-2+2*0)/2]+1 = 14
+            # output width conv2 = [(14-3+2*0)/1]+1 = 12
+            # output width max_pool2 = [(12-2+2*0)/2]+1 = 6
+            self.fc1_input_features = 16 * 6 * 6  # Calculate based on the output size of the second convolutional block
         else:
             # Implementation for Q2.2
             # First convolutional block
             self.conv1 = nn.Conv2d(in_channels=1, out_channels=8, kernel_size=3, stride=2, padding=1)
             # Second convolutional block
             self.conv2 = nn.Conv2d(in_channels=8, out_channels=16, kernel_size=3, stride=2, padding=0)
-            # Activation function
-            self.relu = nn.ReLU()
+
+            # output width = [(W−K+2P)/S]+1
+            # output width conv1 = [(28-3+2*1)/2]+1 = 14 (floor)
+            # output width conv2 = [(14-3+2*0)/2]+1 = 6 (floor)
+            self.fc1_input_features = 16 * 6 * 6  # Calculate based on the output size of the second convolutional block
+            
+        # Activation function
+        self.relu = nn.ReLU()
         
         # Implementation for Q2.1 and Q2.2
         # Fully connected layers
-        self.fc1_input_features = 16 * 6 * 6  # Calculate based on the output size of the second convolutional block
         self.fc1 = nn.Linear(self.fc1_input_features, 320)
         self.fc2 = nn.Linear(320, 120)
         self.fc3 = nn.Linear(120, 4)
@@ -52,33 +62,36 @@ class CNN(nn.Module):
         
     def forward(self, x):
         # input should be of shape [b, c, w, h]
+        x = torch.reshape(x, (x.shape[0], 1, 28, 28))
+        
         # conv and relu layers 
-        x = x.view(x.shape[0], 1, 28, 28)
         x = self.conv1(x)
-        x = self.relu(x)
 
         # max-pool layer if using it
         if not self.no_maxpool:
             x = self.pool(x)
+        x = self.relu(x)
 
         # conv and relu layers
         x = self.conv2(x)
-        x = self.relu(x)
 
         # max-pool layer if using it
         if not self.no_maxpool:
             x = self.pool(x)
+        x = self.relu(x)    
 
         # prep for fully connected layer + relu
-        # eu corri os graficos com esta linha de codigo mas da igual por isso deixei comentado x = torch.flatten(x, 1)
         x = x.view(-1, self.fc1_input_features)
-        x = self.relu(self.fc1(x))
+        
+        x = self.fc1(x)
+        x = self.relu(x)
 
         # drop out
         x = self.drop(x)
 
         # second fully connected layer + relu
-        x = self.relu(self.fc2(x))
+        x = self.fc2(x)
+        x = self.relu(x)
 
         # last fully connected layer
         x = self.fc3(x)
@@ -161,12 +174,6 @@ def main():
         dataset, batch_size=opt.batch_size, shuffle=True)
     dev_X, dev_y = dataset.dev_X, dataset.dev_y
     test_X, test_y = dataset.test_X, dataset.test_y
-
-    batch_idx, (example_imgs, example_targets) = next(enumerate(train_dataloader))
-    # info about the dataset
-    D_in = np.prod(example_imgs.shape[1:])
-    D_out = len(train_dataloader.dataset.dev_y.unique())
-    print("N input features:", D_in, "Output classes:", D_out)
     
     # initialize the model
     model = CNN(opt.dropout, no_maxpool=opt.no_maxpool)

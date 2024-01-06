@@ -1,0 +1,11 @@
+.1 - learning rate = 0.01
+
+.2 - (ask about other hyperparameters)
+
+.3 - Number of parameters: The number of trainable parameters in a neural network is a critical factor. In general, more parameters allow a network to learn more complex representations but may also increase the risk of overfitting, especially if the dataset is not large enough.
+    Max-pooling: The inclusion or exclusion of max-pooling layers affects the spatial resolution of the feature maps. Max-pooling helps in reducing the spatial dimensions, which can be beneficial for capturing important features and reducing computational load. However, in some cases, removing max-pooling may allow the network to preserve more spatial information.
+    Striding in convolution layers: The use of striding in convolutional layers affects how the filters move across the input. Larger strides reduce the spatial dimensions and may result in a more compact representation.
+    Dropout: The dropout layer introduces regularization by randomly dropping units during training, which can prevent overfitting. The choice of dropout probability can influence the trade-off between underfitting and overfitting.
+    The performance difference between the networks may arise from a combination of these factors. 
+    It's often necessary to experiment with different architectures and hyperparameters to find the best configuration for a specific task and dataset. 
+    Additionally, considering the number of trainable parameters can provide insights into the model's capacity and potential for overfitting.
